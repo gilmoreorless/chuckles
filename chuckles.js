@@ -10,9 +10,8 @@ WARNING: This is still completely experimental, not guaranteed to work properly
 
 NOTES:
 
-* Canvas has a single background image (e.g. face)
+√ Canvas has a single background image (e.g. face)
     √ Image can be a string src, Image element or callback function for drawing to canvas directly
-    * Allow offset positioning on canvas, don't default to 0,0
 √ Segment is cut away from bg image (e.g. mouth)
     √ NEED DEFINITION OF SEGMENT PATH - series of context commands?
 √ Movement is where the path should move to at 100%
@@ -27,6 +26,7 @@ NOTES:
 
 FUTURE IDEAS
 
+* Allow offset positioning for image on canvas, don't default to 0,0
 * Movement options: Easing, keyframes, transforms (rotate, scale, skew)
 * Support multiple segments
     * Idea 1: All segments behave the same way, based on a single position
@@ -76,7 +76,6 @@ Chuckles = (function () {
         this.fillStyle = options.fillStyle || 'none';
         this.setSegmentPath(options.path || []);
         if (options.image) {
-            var self = this;
             this.setImage(options.image);
         } else {
             this.render();
@@ -263,6 +262,7 @@ Chuckles = (function () {
     var modeEvents = {
         normal: {
             setup: function () {
+                this.setPosition(0);
                 this.render();
             }
         },
