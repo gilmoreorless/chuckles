@@ -65,11 +65,14 @@ Chuckles = (function () {
         }
     }
 
+    Chuckles.version = '0.2.0';
+
     var cproto = Chuckles.prototype;
 
     /*** Internal methods ***/
 
     cproto._drawBackground = function () {
+        this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
         if (typeof this.image === 'function') {
             this.ctx.save();
             this.image(this.ctx);
