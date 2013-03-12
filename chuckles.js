@@ -4,26 +4,6 @@
  * Open source under the MIT licence: http://gilmoreorless.mit-license.org/
  */
 
-/*****
-
-FEATURES:
-
-√ Canvas has a single background image (e.g. face)
-    √ Image can be a string src, Image element or callback function for drawing to canvas directly
-√ Segment is cut away from bg image (e.g. mouth)
-    √ NEED DEFINITION OF SEGMENT PATH - series of context commands?
-√ Movement is where the path should move to at 100%
-    √ Simple x/y offsets, relative to initial starting position
-√ Position is a value from 0 to 1 - path is moved according to position
-√ Fill colour when segment path is cut out
-√ Only move segment in steps for more of a "wooden" feel
-√ "Setup mode" - allow drawing a path on bg image to define a segment
-√ Bind an input source to position for auto-updating
-    √ HTML input element (text|range|radio|checkbox, textarea, select)
-    √ AudioContext for sound-based
-
-*****/
-
 Chuckles = (function () {
 
     var getType = function (thing) {

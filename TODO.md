@@ -1,6 +1,8 @@
 ## FUTURE IDEAS
 
+* Draw a border around the mouth segment
 * Allow offset positioning for image on canvas, don't default to 0,0
+* Accept new canvas context Path objects as well as arrays for the `path` option
 * Movement options: Easing, keyframes, transforms (rotate, scale, skew)
 * Support multiple segments
     * Idea 1: All segments behave the same way, based on a single position
