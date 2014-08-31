@@ -13,7 +13,7 @@ I built this for a presentation at [SydJS][sydjs] (thus it has limited browser s
 
 ## Examples
 
-**NOTE:** I built these demos to work in Chrome only, as it’s _currently_ the only browser that supports both the Web Audio API and getting a microphone stream via `navigator.getUserMedia()`
+**NOTE:** I built these demos to work in Chrome only, as it was the only browser at the time that supported both the Web Audio API and getting a microphone stream via `navigator.getUserMedia()`. However, it’s been updated to use non-prefixed APIs so it _should_ work in any browser that supports them.
 
 * [Basic demo][demoBasic] - hard-coded image and mouth co-ordinates
 * [Full demo][demoFull] - upload an image and draw the mouth region yourself
